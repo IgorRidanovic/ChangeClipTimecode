@@ -39,9 +39,13 @@ def reset_clip_timecode(x):
 		# Set new starting timecode to each clip
 		clip.SetClipProperty('Start TC', tcValid)
 
-		# Check back new timecodes
+		# Check back new timecodes, pre V17
 		print clip.GetClipProperty('Start TC')['Start TC'],\
 			  clip.GetClipProperty('Clip Name')['Clip Name']
+		
+# 		# Check back new timecodes, V17
+# 		print clip.GetClipProperty('Start TC'),\
+# 			  clip.GetClipProperty('Clip Name')
 
 
 if __name__ == '__main__':
